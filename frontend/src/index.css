@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply text-slate-800 antialiased;
+    background-color: #f0faf5;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-emerald-900/10;
+  }
+
+  .shadow-soft {
+    box-shadow: 0 30px 90px -55px rgba(2, 6, 23, 0.28);
+  }
+
+  .grid-fade {
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(2, 6, 23, 0.08) 1px, transparent 0);
+    background-size: 22px 22px;
+  }
+}
